@@ -8,9 +8,6 @@ import test.enums.TipoDeCarga;
 
 public class Inicio {
 	
-	/*
-	 * Ejemplos de incialización de las variables y los tipos de variable nativa.
-	 */
 	final int km = 10212;
 	float precio = 12.3f;
 	char letra = 'a';
@@ -78,12 +75,9 @@ public class Inicio {
 		
 		Animal gato = new Animal("Felix Catus");  
 		
-		Coche xsara = new Coche("Citroen Xsara");
-		xsara.setPuertas(5);
-		Coche picasso = new Coche("Citroen Picasso");
-		picasso.setPuertas(5);
-		Coche ferrari = new Coche("Ferrari"); 
-		ferrari.setPuertas(3);
+		Coche xsara = new Coche("Citroen Xsara", 5);
+		Coche picasso = new Coche("Citroen Picasso", 5);
+		Coche ferrari = new Coche("Ferrari", 3); 
 		
 		int ruedas = xsara.getRuedas();
 		System.out.println(ruedas);

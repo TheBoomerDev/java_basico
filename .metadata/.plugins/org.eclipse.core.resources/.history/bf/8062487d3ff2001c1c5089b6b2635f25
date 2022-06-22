@@ -20,10 +20,6 @@ public class Coche {
 	 */
 	private Motor motor;
 
-	/**
-	 * 
-	 * @param marca <= Inicializamos la constante de la marca del coche
-	 */
 	public Coche(String marca) {
 		this.marca = marca;
 		this.motor = new Motor();

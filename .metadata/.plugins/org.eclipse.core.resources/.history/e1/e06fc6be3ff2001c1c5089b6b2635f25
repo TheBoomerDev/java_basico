@@ -8,9 +8,6 @@ import test.enums.TipoDeCarga;
 
 public class Inicio {
 	
-	/*
-	 * Ejemplos de incialización de las variables y los tipos de variable nativa.
-	 */
 	final int km = 10212;
 	float precio = 12.3f;
 	char letra = 'a';

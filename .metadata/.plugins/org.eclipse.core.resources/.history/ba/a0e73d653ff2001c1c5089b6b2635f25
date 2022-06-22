@@ -2,11 +2,6 @@ package test;
 
 public class Coche {
 	
-	/*
-	 * CONSTANTE con la marca del coche.
-	 * Tiene valor cuando se incializa, y NO se puede cambiar. 
-	 * Una vez tiene valor, no se puede cambiar (final)
-	 */
 	private final String marca;
 	
 	/*
@@ -15,15 +10,8 @@ public class Coche {
 	 */
 	private int puertas = 3;
 	
-	/*
-	 * Variable de tipo motor; que se crea en el constructor.
-	 */
 	private Motor motor;
 
-	/**
-	 * 
-	 * @param marca <= Inicializamos la constante de la marca del coche
-	 */
 	public Coche(String marca) {
 		this.marca = marca;
 		this.motor = new Motor();
