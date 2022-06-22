@@ -1,0 +1,14 @@
+package test;
+
+public class Animal {
+	
+	boolean estaVivo = true;
+	int puntosDeVida = 100;
+	
+	String nombreEspecie;
+	
+	public Animal(String nombre) {
+		this.nombreEspecie = nombre;
+	}
+
+}

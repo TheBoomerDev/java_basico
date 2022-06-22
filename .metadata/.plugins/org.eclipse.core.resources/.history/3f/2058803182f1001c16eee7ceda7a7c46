@@ -1,0 +1,19 @@
+package test.baraja;
+
+public class Carta {
+	
+	public static enum PALOS{
+		CORAZON,
+		PICAS,
+		ROMBOS,
+		DIAMANTE
+	}
+
+	String palo;
+	int valor;
+	
+	public Carta(String palo, int valor) {
+		this.palo = palo;
+		this.valor = valor;
+	}
+}

@@ -1,0 +1,36 @@
+package test.bucles;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BucleFor {
+
+	public static void main(String[] args) {
+		
+		List<String> lista = new ArrayList<String>();
+		lista.add("Hola");
+		lista.add("Mundo");
+		lista.add("Que");
+		lista.add("Tal");
+		lista.add("Estais");
+		
+		boolean condicionSalida = true;
+		for (int i = 0; condicionSalida; i++) {
+			
+			if (i < 5) {
+				condicionSalida = false;
+			}
+			
+			String cadena = lista.get(0);
+			System.out.println(cadena);
+		}
+		
+		for (String cadena : lista) {
+			// System.out.println(cadena);
+		} 
+		
+		
+		
+	}
+	
+}

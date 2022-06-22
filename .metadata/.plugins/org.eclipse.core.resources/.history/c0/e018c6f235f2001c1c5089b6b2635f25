@@ -1,0 +1,15 @@
+package test.bucles;
+
+public class BucleWhile {
+	
+	public static void main(String[] args) {
+		
+		int aculumador = 0;
+		while( aculumador <= 100 ) {
+			System.out.println(aculumador);
+		}
+		
+		
+	}
+
+}

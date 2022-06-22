@@ -1,0 +1,21 @@
+package test;
+
+public class Inicio {
+
+	public static void main(String[] args) {
+		
+		int km = 10212;
+		float precio = 12.3f;
+		char letra = 'a';
+		String cadenaTexto = "Hola, Mundo";
+		boolean verdaderoFalso = false;
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
