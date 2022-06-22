@@ -40,19 +40,10 @@ public class Animal {
 	 */
 	public void restarVida (int valor) {
 		
-		// En caso que ya esté muerto, no quitamos puntos de vida. Salimos de la función
-		if (!this.estaVivo) {
-			return;
+		if (this.estaVivo) {
+			this.puntosDeVida = this.puntosDeVida - valor;
 		} 
 		
-		if (valor < 0) {
-			valor = -1 * valor;
-		}
-		
-		// Quitamos la vida
-		this.puntosDeVida = this.puntosDeVida - valor;
-		
-		// Comprobamos si está muerto
 		if (this.puntosDeVida <= 0) {
 			this.estaVivo = false;
 		}

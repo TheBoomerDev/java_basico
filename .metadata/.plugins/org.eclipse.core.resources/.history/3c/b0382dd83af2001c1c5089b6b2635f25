@@ -22,8 +22,6 @@ public class Animal {
 	public final String nombreEspecie;
 	
 	/**
-	 * <strong>Constructor</strong> de la clase. 
-	 * Una vez tenemos 1 constructor definido, no podemos usar otro. 
 	 * 
 	 * @param nombre - Nombre de la especie, <strong>No es modificable</strong>
 	 */
@@ -31,28 +29,12 @@ public class Animal {
 		this.nombreEspecie = nombre;
 	}
 
-	/**
-	 * Restar la vida <i>(hacer daño)</i> al animal. 
-	 * 
-	 * En caso de que los puntos de vida lleguen a 0, <i>"Matamos al animal"</i>
-	 *  
-	 * @param valor Numero de puntos de vida que restamos al animal
-	 */
 	public void restarVida (int valor) {
 		
-		// En caso que ya esté muerto, no quitamos puntos de vida. Salimos de la función
-		if (!this.estaVivo) {
-			return;
+		if (this.estaVivo) {
+			this.puntosDeVida = this.puntosDeVida - valor;
 		} 
 		
-		if (valor < 0) {
-			valor = -1 * valor;
-		}
-		
-		// Quitamos la vida
-		this.puntosDeVida = this.puntosDeVida - valor;
-		
-		// Comprobamos si está muerto
 		if (this.puntosDeVida <= 0) {
 			this.estaVivo = false;
 		}
