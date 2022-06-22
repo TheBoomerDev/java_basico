@@ -1318,3 +1318,54 @@ java.lang.IllegalArgumentException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:27:25.706
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.fIkgdjBJ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:08.809
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:08.810
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@305230ea[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=466)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:08.811
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:10.491
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:10.492
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@305230ea[org.springframework.tooling.boot.ls:1.23.0.202010230633(id=466)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:10.493
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.621
+!MESSAGE Boot LS startup time from start to initialized: 3126ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.804
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RarNscOEisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.805
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.806
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.807
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.807
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.808
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.RarNscOE => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.809
+!MESSAGE classpath=2 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.810
+!MESSAGE buffering callback sts4.classpath.RarNscOE test false 2
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.810
+!MESSAGE executing callback sts4.classpath.RarNscOE 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-22 17:29:13.872
+!MESSAGE executing callback sts4.classpath.RarNscOE SUCCESS [done]
