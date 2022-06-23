@@ -1,0 +1,2 @@
+module javaBasico02 {
+}

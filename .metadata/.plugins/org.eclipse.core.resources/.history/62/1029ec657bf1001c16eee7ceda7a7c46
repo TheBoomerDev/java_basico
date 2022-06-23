@@ -1,7 +1,0 @@
-package test.baraja;
-
-public class Baraja {
-	
-	List<Carta> cartas = new ArrayList<Carta>();
-
-}
