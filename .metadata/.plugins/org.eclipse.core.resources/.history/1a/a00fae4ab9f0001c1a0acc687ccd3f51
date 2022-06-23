@@ -1,7 +1,0 @@
-package test;
-
-public class Producto {
-	float precio =  5.50f;
-	String nombre = "Nombre Producto";
-	int unidades = 100;
-}
