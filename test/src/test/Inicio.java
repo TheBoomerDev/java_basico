@@ -107,6 +107,12 @@ public class Inicio {
 		if (val1 == val2) {
 			System.out.println("Son Iguales");
 		}
+		
+		// Generar un numero aleatorio entre 2 numeros
+		// Un numero aleatorio entre 1-100
+		int min = 1;
+		int max = 100;
+		int rndNumber = (int) (Math.random() * (max - min + 1) + min);
 
 	}
 
