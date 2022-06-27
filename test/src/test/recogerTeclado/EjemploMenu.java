@@ -22,12 +22,15 @@ public class EjemploMenu {
 	public static void funcion4() {
 		System.out.println("4) Opcion 4");
 		menu();
-	}
-	
+	} 
 	
 	public static void funcion5() {
 		System.out.println("5) Opcion 5");
 		menu();
+	}
+	
+	public static void funcionGenerica (int option) {
+		
 	}
 	
 	public static void menu() {
@@ -43,7 +46,7 @@ public class EjemploMenu {
 		System.out.println("=======================");
 		
 		System.out.print("¿Que Quieres?: ");
-	    int length = console.nextInt();
+	    int length = console.nextInt(); 
 	    
 	    switch (length) {
 		case 1: {
