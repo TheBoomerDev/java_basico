@@ -13,7 +13,8 @@ public class Matrices {
 		// Recorrer 
 		for (int i = 0; i < matriz1D.size(); i++) {
 			Integer valor = matriz1D.get(i);
-			System.out.println("Coordernadas de valor:"+valor+" -> "+i);
+			String formato = "Coods: %s -> (%d)";
+			System.out.println(String.format(formato, valor, i));
 		}
 		
 		// Matriz 2 Dimensiona -> Array-Array
@@ -24,7 +25,8 @@ public class Matrices {
 			List<Integer> segundaDimension = matriz2D.get(i);
 			for (int j = 0; j < segundaDimension.size(); j++) {
 				Integer valor = segundaDimension.get(j);
-				System.out.println("Coordernadas de valor:"+valor+" -> "+i+"-"+j);
+				String formato = "Coods: %s -> (%d,%d)";
+				System.out.println(String.format(formato, valor, i, j));
 			}
 		}
 		
@@ -37,7 +39,8 @@ public class Matrices {
 				ArrayList<Integer> terceraDimension = segundaDimension.get(j);
 				for (int k = 0; k < args.length; k++) {
 					Integer valor = terceraDimension.get(k);
-					System.out.println("Coordernadas de valor:"+valor+" -> "+i+"-"+j+"-"+k);
+					String formato = "Coods: %s -> (%d,%d,%d)";
+					System.out.println(String.format(formato, valor, i, j, k));
 				}
 				
 			}
@@ -53,7 +56,8 @@ public class Matrices {
 					ArrayList<Integer> cuartaDimension = terceraDimension.get(k);
 					for (int l = 0; l < cuartaDimension.size(); l++) {
 						Integer valor = cuartaDimension.get(k);
-						System.out.println("Coordernadas de valor:"+valor+" -> "+i+"-"+j+"-"+k+"-"+l);
+						String formato = "Coods: %s -> (%d,%d,%d,%d)";
+						System.out.println(String.format(formato, valor, i, j, k, l));
 					}
 				}
 				

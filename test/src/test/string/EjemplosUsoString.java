@@ -47,6 +47,12 @@ public class EjemplosUsoString {
 		System.out.println( (Object) cad1);
 		System.out.println( (Object) cad2);		
 		        
+		
+		// Formateo
+		
+		String formato = "%s-%c%c%c%c%c%d Vaya Por Dios";
+		String formateado = String.format(formato, cad2, ch1, ch1, ch1, ch1, ch1,12);
+		System.out.println(formateado);
 		        
 	}
 }
