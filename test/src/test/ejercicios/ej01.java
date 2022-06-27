@@ -15,7 +15,7 @@ public class ej01 {
 		int resta = var1 - var2;
 		
 		// DIVISION
-		float division = var1 / var2;
+		float division = ((float)var1) / var2;
 		
 		// MULTIPLICACIO
 		float multi = var1 * var2;

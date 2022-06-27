@@ -11,12 +11,15 @@ public class Inicio {
 	/*
 	 * Ejemplos de incialización de las variables y los tipos de variable nativa.
 	 */
-	final int km = 10212;
+	final int km = 10217772;
+	long enteroLargo = 0;
 	float precio = 12.3f;
+	double floatPrecision = 0f;
 	char letra = 'a';
-	String cadenaTexto = "Hola, Mundo";
 	boolean verdaderoFalso = false;
 
+	String cadenaTexto = "Hola, Mundo";
+	
 	public int convertir (float aux) {
 		return (int) aux;
 	}
@@ -78,11 +81,11 @@ public class Inicio {
 		
 		Animal gato = new Animal("Felix Catus");  
 		
-		Coche xsara = new Coche("Citroen Xsara");
+		Coche xsara = new Coche("Citroen Xsara", COMBUSTIBLE.DIESEL);
 		xsara.setPuertas(5);
-		Coche picasso = new Coche("Citroen Picasso");
+		Coche picasso = new Coche("Citroen Picasso", COMBUSTIBLE.GASOLINA);
 		picasso.setPuertas(5);
-		Coche ferrari = new Coche("Ferrari"); 
+		Coche ferrari = new Coche("Ferrari", COMBUSTIBLE.HIBRIDO); 
 		ferrari.setPuertas(3);
 		
 		int ruedas = xsara.getRuedas();

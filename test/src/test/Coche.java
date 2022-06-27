@@ -1,6 +1,15 @@
 package test;
 
-public class Coche {
+public class Coche implements Comparable<Coche> {
+
+	// Atributo Static - Atributo de Clase
+	public static final float pi = 3.14f; // No puede variar, se puede acceder desde fuera, y es atributo de clase
+	public static int cosa = 0;
+	public int valor = 0;
+	
+	public static int getCosa() {
+		return Coche.cosa;
+	}
 	
 	/*
 	 * CONSTANTE con la marca del coche.
@@ -24,9 +33,9 @@ public class Coche {
 	 * 
 	 * @param marca <= Inicializamos la constante de la marca del coche
 	 */
-	public Coche(String marca) {
+	public Coche(String marca, COMBUSTIBLE combustible) {
 		this.marca = marca;
-		this.motor = new Motor();
+		this.motor = new Motor(combustible);
 	}
 	
 	public void setPuertas(int puertas) {
@@ -40,4 +49,32 @@ public class Coche {
 	public Motor getMotor() {
 		return this.motor;
 	}
+
+	@Override
+	public int compareTo(Coche o) {
+		String marca = o.marca;
+		if (marca.equals(this.marca)) return 0;
+		
+		if (marca.length() > this.marca.length()) return 1;
+		
+		return -1;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Coche coche2 = (Coche) obj;
+		if (!this.marca.equals(coche2.marca)) return false;
+		
+		if (this.puertas != coche2.puertas) return false;
+		
+		if (!this.motor.equals(coche2.motor)) return false;
+		
+		return true;		
+	}
+	
+	@Override
+	public String toString() {
+		return "Marca: "+this.marca+ " - Puertas:"+this.puertas+" - Motor:"+this.motor.toString();
+	}
+	
 }
