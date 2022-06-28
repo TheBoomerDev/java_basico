@@ -44,5 +44,16 @@ public class Empleado {
 		this.antiguedad = antiguedad;
 	}
 	
-	
+	@Override
+	public String toString() {
+		Calendar ant = this.antiguedad;
+		int day = ant.get(Calendar.DAY_OF_MONTH);
+		int month = ant.get(Calendar.MONTH);
+		int year = ant.get(Calendar.YEAR);
+		String format = "DD/MM/YYYY";
+		String strDate = format.formatted(day, month, year);
+		
+		String formato = "N: %s - E:%d -> Desde: %s :: Sueldo: %d";
+		return formato.formatted(this.nombre, this.edad, strDate, this.sueldo);
+	}
 }
