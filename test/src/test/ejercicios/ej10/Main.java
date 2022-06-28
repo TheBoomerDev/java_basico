@@ -17,6 +17,13 @@ public class Main {
 		- Cálculo Balance en Fechas
 	 */
 	
+	public void addIngreso() {
+		/*
+		 * 1.- Pedir los datos para generar el moviemiento
+		 * 2.- Llamar a Cartera.addIngreso()
+		 */
+	}
+	
 	
 	public void menu() {
 		Scanner console = new Scanner(System.in); 
@@ -36,6 +43,7 @@ public class Main {
 	    switch (length) {
 		case 1: {
 			// Añadir Ingreso
+			addIngreso();
 			break;
 		} 
 		case 2: {
