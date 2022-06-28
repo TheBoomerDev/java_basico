@@ -1,6 +1,9 @@
 package test.ejercicios.ej09;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,8 +41,38 @@ public class ej09 {
 		int sueldo = console.nextInt(); 
 		nuevo.setSueldo(sueldo);
 		
-		System.out.print("Antiguedad: ");
-		// TODO: FIXME: Hacer una función
+		System.out.print("Antiguedad (DD/MM/YYYY): ");
+		String strFecha = console.next();
+		String[] valores = strFecha.split("/");
+		
+		/*
+		 // FORMA 1 De Hacerlo: 
+		Date date = new Date();
+		date.setDate( Integer.valueOf(valores[0]) );
+		date.setMonth( Integer.valueOf(valores[1])-1 );
+		date.setYear( Integer.valueOf(valores[2])-1900 );
+		
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		nuevo.setAntiguedad(cal); 
+		 
+		 */
+		
+		/*
+		 // FORMA 3 De Hacerlo: 
+		 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+		Date date = sdf.parse(strFecha);
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		nuevo.setAntiguedad(cal); 
+		 */
+	 
+		// FORMA 2 De Hacerlo: 
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.DAY_OF_MONTH, Integer.valueOf(valores[0]) );
+		cal.set(Calendar.MONTH, Integer.valueOf(valores[1])-1 );
+		cal.set(Calendar.YEAR, Integer.valueOf(valores[2]) );
+		nuevo.setAntiguedad(cal);   
 		
 		empleados.add(nuevo);
 		
