@@ -39,10 +39,26 @@ public class ej09 {
 		int sueldo = console.nextInt(); 
 		nuevo.setSueldo(sueldo);
 		
+		nuevo = recogerFecha(nuevo, console);
+		
+		
+		empleados.add(nuevo);
+		
+		System.out.println("=======================");
+		System.out.println("= Empleado Guardado =");
+		System.out.println("=======================");
+		
+		// Hacer que espere a tener que esperar a Enter.
+		console.next();
+		
+		menu();
+	}
+	
+	private static Empleado recogerFecha(Empleado nuevo, Scanner console) {
+
 		System.out.print("Antiguedad (DD/MM/YYYY): ");
-		String strFecha = console.next();
-		
-		
+		String strFecha = console.next(); // Formato: DD/MM/YYYY
+  
 		/*
 		 // FORMA 1 De Hacerlo: 
 		String[] valores = strFecha.split("/");
@@ -53,11 +69,10 @@ public class ej09 {
 		
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
-		nuevo.setAntiguedad(cal); 
-		 
-		 */
+		nuevo.setAntiguedad(cal);  
 		
-		/*
+		// =====================
+		
 		 // FORMA 3 De Hacerlo: 
 		 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 		Date date = sdf.parse(strFecha);
@@ -74,18 +89,9 @@ public class ej09 {
 		cal.set(Calendar.YEAR, Integer.valueOf(valores[2]) );
 		nuevo.setAntiguedad(cal);   
 		
-		empleados.add(nuevo);
-		
-		System.out.println("=======================");
-		System.out.println("= Empleado Guardado =");
-		System.out.println("=======================");
-		
-		// Hacer que espere a tener que esperar a Enter.
-		console.next();
-		
-		menu();
+		return nuevo;
 	}
-	
+
 	public static void buscarEmpleado() {
 		Scanner console = new Scanner(System.in);
 		
