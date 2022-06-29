@@ -4,10 +4,12 @@ public class Jugada {
 
 	private Valor valor;
 	private int nJugador;
+	private Ficha ficha;
 	
-	public Jugada(Valor valor, int nJugador) {
+	public Jugada(Valor valor, int nJugador, Ficha ficha) {
 		this.valor = valor;
 		this.nJugador = nJugador;
+		this.ficha = ficha;
 	}
 	
 	public Valor getValor() {
@@ -23,19 +25,29 @@ public class Jugada {
 		this.nJugador = nJugador;
 	}
 	
+	
+	
+	public Ficha getFicha() {
+		return ficha;
+	}
+
+	public void setFicha(Ficha ficha) {
+		this.ficha = ficha;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		Jugada jugada = (Jugada) obj;
 		
 		if (this.valor != jugada.valor) return false;
-		if (this.nJugador != jugada.nJugador) return false;
+		if (this.nJugador != jugada.nJugador) return false; 
 		
 		return true;
 	}
 	
 	@Override
 	public String toString() {
-		return "PJ: %d - V: %s".formatted(this.nJugador, this.valor);
+		return "PJ: %d - V: %s - T: %s".formatted(this.nJugador, this.valor, this.ficha);
 	}
 	
 }

@@ -17,8 +17,9 @@ public class Main {
 			// Ternaria
 			Valor valor = (jugadorActual1) ? Valor.O : Valor.X;
 			int nPj = (jugadorActual1) ? 1 : 2;
+			Ficha ficha = Ficha.getAleatorio();
 						
-			Jugada jugada = new Jugada(valor, nPj);
+			Jugada jugada = new Jugada(valor, nPj, ficha);
 			System.out.println("Juega -> "+jugada.toString());
 			
 			
@@ -34,10 +35,12 @@ public class Main {
 				// Comprobamos si está ocupada
 				boolean ocupada = juego.estaOcupada(posX, posY);
 				if (!ocupada) {
-					juego.addJugada(jugada, posX, posY);
-					sigueJugando = false;
-					String formato = "%d-%d => %s".formatted(posX, posY, ocupada);
-					System.out.println(formato);
+					boolean puesta = juego.addJugada(jugada, posX, posY);
+					if (puesta) {
+						sigueJugando = false;
+						String formato = "%d-%d => %s".formatted(posX, posY, ocupada);
+						System.out.println(formato);
+					} 
 				}
 				 
 			}  

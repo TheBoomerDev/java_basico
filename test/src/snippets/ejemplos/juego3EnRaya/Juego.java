@@ -28,17 +28,23 @@ public class Juego {
 		return false;
 	}
 	
-	public void addJugada(Jugada jugada, int posX, int posY) {
+	public boolean addJugada(Jugada jugada, int posX, int posY) {
 		if ( ( (posY < 0) || posY > 2 ) || ( (posX < 0) || posX > 2 ) || jugada == null) {
-			return;
+			return false;
 		} 
 		
+		// Comprobamos si hay una ficha
 		if (tablero[posX][posY] != null) {
-			return;
+			Jugada previa = tablero[posX][posY];
+			// Comprobamos si la puede comer o no
+			boolean puedeComer = Ficha.meCome(previa.getFicha(), jugada.getFicha());
+			if (!puedeComer) return false;
 		}
 		
-		tablero[posX][posY] = jugada;
+		// Ponemos la Ficha
+		tablero[posX][posY] = jugada; 
 		
+		return true;
 	}
 	
 	public EstadoPartida comprobar() {
