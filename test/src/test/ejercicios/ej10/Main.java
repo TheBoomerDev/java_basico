@@ -87,7 +87,7 @@ public class Main {
 		gastos.add(gasto);
 	}
 	
-	public void calculoGastosEntreFechas() {
+	public int calculoGastosEntreFechas(List<Movimiento> listadoMovimientos) {
 		Scanner console = new Scanner(System.in);
 		
 		System.out.print("Fecha Inicio: ");
@@ -97,7 +97,7 @@ public class Main {
 		
 		int sumatorio = 0;
 		
-		for (Movimiento gasto : gastos) {
+		for (Movimiento gasto : listadoMovimientos) {
 			
 			// Comprobamos si está en rango
 			Calendar fechaGasto = gasto.getFecha();
@@ -118,9 +118,7 @@ public class Main {
 			
 		}
 		
-		String mensaje = "Suma de Gastos: %d".formatted(sumatorio);
-		System.out.println(mensaje);
-		
+		return sumatorio;
 		
 	}
 	
@@ -153,16 +151,27 @@ public class Main {
 		}
 		case 3: {
 			// Cálculo Gastos en Rango Fechas
-			calculoGastosEntreFechas();
+			int calculo = calculoGastosEntreFechas(gastos);
+			String mensaje = "Suma de Gastos: %d".formatted(calculo);
+			System.out.println(mensaje); 
 			break;
 		} 
 		case 4: {
 			// Cálculo Ingresos en Rango Fechas
+			int calculo = calculoGastosEntreFechas(ingresos);
+			String mensaje = "Suma de Ingresos: %d".formatted(calculo);
+			System.out.println(mensaje); 
 			break;
 		} 
 		
 		case 5: {
 			// Cálculo Balance en Fechas
+			int calculoIngresos = calculoGastosEntreFechas(gastos);
+			int calculoGastos   = calculoGastosEntreFechas(ingresos);
+			int balance = calculoIngresos - calculoGastos;
+			String mensaje = "Balance de Cuenta: %d".formatted(balance);
+			System.out.println(mensaje); 
+			
 			break;
 		} 
 		case 0:
