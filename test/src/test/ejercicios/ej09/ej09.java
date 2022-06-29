@@ -79,6 +79,10 @@ public class ej09 {
 		System.out.println("=======================");
 		System.out.println("= Empleado Guardado =");
 		System.out.println("=======================");
+		
+		// Hacer que espere a tener que esperar a Enter.
+		console.next();
+		
 		menu();
 	}
 	
